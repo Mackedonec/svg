@@ -1,0 +1,902 @@
+ body::before {
+   display: none;
+ }
+
+ body::after {
+   display: none;
+ }
+
+ body {
+   background-color: #000000;
+ }
+
+ .invisible {
+   display: none;
+ }
+
+ .wraper-2 {
+   z-index: -1;
+   height: 100vh;
+   background-image: url(../img/cow-2.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+ }
+
+ .wraper {
+   z-index: -1;
+   height: 100vh;
+   background-image: url(../img/space-2.png);
+   background-repeat: no-repeat;
+   background-position: 100% 100%;
+   background-size: cover;
+   background-attachment: fixed;
+ }
+
+ .wraper-3 {
+   z-index: -1;
+   height: 100vh;
+   width: 100vw;
+   background-color: #000000;
+   background-image: url(../img/space.png);
+   background-repeat: no-repeat;
+   background-position: 100% 0;
+   background-size: cover;
+   background-attachment: fixed;
+ }
+
+ .wraper-4 {
+   z-index: -1;
+   height: 100vh;
+   width: 100vw;
+   background-color: #000000;
+   background-image: url(../img/cow.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+ }
+
+ .viewBox {
+   width: calc(100vw - 100px);
+   ;
+   height: calc(100vh - 100px);
+ }
+
+ .button-group {
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: calc(50% - 150px);
+   margin-right: calc(50% - 150px);
+ }
+
+ .btn-1,
+ .btn-2,
+ .btn-3 {
+   width: 100%;
+   max-width: 90px;
+   margin-right: 5px;
+   padding: 10px 10px;
+ }
+
+ .btn-1,
+ .btn-1:hover,
+ .btn-1:active {
+   background-color: #f90707;
+ }
+
+ .btn-2,
+ .btn-2:hover,
+ .btn-2:active {
+   background-color: #3c32f6;
+ }
+
+ .btn-3,
+ .btn-3:hover,
+ .btn-3:active {
+   background-color: #07f917;
+ }
+
+ .alert-img {
+   display: flex;
+   justify-content: center;
+
+ }
+
+ .alert-img img {
+   max-height: 100px;
+ }
+
+ .wraper .alert-primary,
+ .wraper .alert-success,
+ .wraper .alert-danger {
+   z-index: 0;
+   top: 100px;
+   left: -550px;
+   border: 2px solid #000000;
+   transition: 1s;
+ }
+
+ .wraper .alert-primary {
+   background-color: #4f43f31b;
+ }
+
+ .wraper .alert-success {
+   background-color: #43f3551a;
+ }
+
+ .wraper .alert-danger {
+   background-color: #f343431d;
+ }
+
+ .wraper .alert {
+   position: absolute;
+   width: 100%;
+   max-width: 550px;
+ }
+
+ .wraper .alert.activ {
+   left: 0;
+   transition: 1s;
+ }
+
+ .ufo-red,
+ .ufo-blue,
+ .ufo-green {
+   display: none;
+ }
+
+ .ufo-red.activ {
+   z-index: 1;
+   display: block;
+   offset-path: path('M413 1467C413 1467 756.048 1159.8 1012.14 1024.5C1297.28 873.846 1537.26 965.866 1793.69 767.698C1993.49 613.297 1979.98 388.957 2190.38 250.385C2468.83 66.9976 3030 145.861 3030 145.861');
+   animation: asteroid-spaceship;
+   animation-duration: 4s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   transform: rotate(15deg);
+   filter: invert(28%) sepia(96%) saturate(7497%) hue-rotate(2deg) brightness(98%) contrast(123%);
+ }
+
+ .ufo-blue.activ {
+   z-index: 1;
+   display: block;
+   offset-path: path('M413 1467C413 1467 911.609 1186.65 1289.92 1149.39C1572.12 1121.6 1739.14 1259.05 2014.81 1206.66C2247.45 1162.45 2404.57 1115.42 2537.97 968.345C2716.41 771.606 2350.79 554.939 2537.97 362.646C2667.89 229.172 3030 149 3030 149');
+   animation: asteroid-spaceship;
+   animation-duration: 4s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   transform: rotate(15deg);
+   filter: invert(8%) sepia(100%) saturate(6080%) hue-rotate(247deg) brightness(110%) contrast(147%);
+ }
+
+ .ufo-green.activ {
+   z-index: 1;
+   display: block;
+   offset-path: path('M414 1467C414 1467 1025 1278.9 1284 1179.5C1543 1080.09 1546 604.221 1715.83 391.352C2046.92 -23.6326 3022 143 3022 143');
+   animation: asteroid-spaceship;
+   animation-duration: 4s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   transform: rotate(15deg);
+   filter: invert(26%) sepia(91%) saturate(1844%) hue-rotate(103deg) brightness(91%) contrast(104%);
+ }
+
+ @keyframes asteroid-spaceship {
+   0% {
+     opacity: 0;
+     offset-distance: 0%;
+   }
+
+   10% {
+     opacity: 0.2;
+     offset-distance: 0%;
+   }
+
+   20% {
+     opacity: 0.5;
+     offset-distance: 0%;
+   }
+
+   30% {
+     opacity: 1;
+     offset-distance: 10%;
+   }
+
+   100% {
+     offset-distance: 100%;
+   }
+ }
+
+ .cow-box {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   align-items: center;
+   padding-bottom: 20px;
+ }
+
+ .cow {
+   max-width: 300px;
+   cursor: pointer;
+ }
+
+ .cow.activ path {
+   animation: cow-stroke;
+   animation-duration: 3s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .cow-head-2,
+ .cow.activ .cow-head-1 {
+   animation: cow-head-1;
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .cow-head-3 {
+   animation: cow-head-3;
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .cow-head-4 {
+   animation: cow-head-4;
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .cow-head-3-2,
+ .cow.activ .cow-head-3-1 {
+   animation: cow-head-1;
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .cow-footer {
+   animation: cow-footer;
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .body-leg-1 {
+   animation: cow-legs;
+   animation-duration: 0.5s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .body-leg-2 {
+   animation: cow-legs;
+   animation-duration: 0.5s;
+   animation-delay: 0.2s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .body-body-1 path:nth-of-type(1) {
+   animation: cow-body;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .body-body-1 path:nth-of-type(2) {
+   animation: cow-leg-1;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .body-body-1 path:nth-of-type(3) {
+   animation: cow-leg-2;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .body-body-2-1 {
+   animation: cow-body-1;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .body-body-2-2 {
+   animation: cow-body-1;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow.activ .body-body-2-3 {
+   animation: cow-body-2;
+   animation-duration: 3s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ @keyframes cow-body {
+   0% {
+     fill: #BCEA73;
+   }
+
+   25% {
+     fill: #620DF8
+   }
+
+   50% {
+     fill: #eaeaea;
+   }
+
+   75% {
+     fill: #620DF8
+   }
+
+   100% {
+     fill: #BCEA73;
+   }
+ }
+
+ @keyframes cow-body-1 {
+
+   0% {
+     fill: #FF00C7;
+   }
+
+   50% {
+     fill: #fffdfd;
+   }
+
+   100% {
+     fill: #FF00C7;
+   }
+ }
+
+ @keyframes cow-body-2 {
+
+   0% {
+     fill: #fc0000;
+   }
+
+   50% {
+     fill: #f2e7f2;
+   }
+
+   100% {
+     fill: #fc0000;
+   }
+ }
+
+ @keyframes cow-legs {
+
+   0% {
+     transform: translatey(0);
+   }
+
+   50% {
+     transform: translatey(-12px);
+   }
+
+   100% {
+     transform: translatey(0);
+   }
+ }
+
+ @keyframes cow-leg-1 {
+
+   0% {
+     fill: #5B5C6C;
+   }
+
+   50% {
+     fill: #ea7373;
+   }
+
+   100% {
+     fill: #5B5C6C;
+   }
+ }
+
+ @keyframes cow-leg-2 {
+
+   0% {
+     fill: #620DF8
+   }
+
+   50% {
+     fill: #eaeaea;
+   }
+
+   100% {
+     fill: #620DF8
+   }
+ }
+
+ @keyframes cow-head-1 {
+   0% {
+     fill: #BCEA73;
+     transform: translate(0px, 0px) skew(-0.5deg);
+   }
+
+   50% {
+     fill: #c5a0f9;
+     transform: translate(10px, 10px) rotate(10deg) skew(0.5deg);
+   }
+
+   100% {
+     fill: #BCEA73;
+     transform: translate(0px, 0px) skew(0.5deg);
+   }
+ }
+
+ @keyframes cow-head-3 {
+   0% {
+     filter: invert(19%) sepia(60%) saturate(5225%) hue-rotate(303deg) brightness(101%) contrast(103%);
+   }
+
+   25% {
+     filter: invert(66%) sepia(19%) saturate(7309%) hue-rotate(352deg) brightness(106%) contrast(102%);
+   }
+
+   50% {
+     filter: invert(79%) sepia(23%) saturate(3465%) hue-rotate(111deg) brightness(97%) contrast(101%);
+   }
+
+   75% {
+     filter: invert(19%) sepia(60%) saturate(5225%) hue-rotate(303deg) brightness(101%) contrast(103%);
+   }
+
+   100% {
+     filter: invert(66%) sepia(19%) saturate(7309%) hue-rotate(352deg) brightness(106%) contrast(102%);
+   }
+ }
+
+ @keyframes cow-head-4 {
+   0% {
+     transform: translate(0px, 0px) skew(3deg);
+     fill: rgb(0, 255, 64);
+   }
+
+   50% {
+     transform: translate(20px, 30px) rotate(15deg) skew(-3deg);
+     fill: aqua;
+   }
+
+   100% {
+     transform: translate(0px, 0px) skew(3deg);
+     fill: rgb(255, 0, 208);
+   }
+ }
+
+ @keyframes cow-stroke {
+
+   0% {
+     stroke: #000000;
+     stroke-dasharray: 0.5px;
+     stroke-width: 0.5%;
+   }
+
+   50% {
+     stroke: #fd61fd;
+     stroke-width: 1%;
+   }
+
+   100% {
+     stroke: #000000;
+     stroke-dasharray: 0.5px;
+     stroke-width: 0.5%;
+   }
+ }
+
+ @keyframes cow-footer {
+   0% {
+     fill: #BCEA73;
+     transform: skew(0deg);
+   }
+
+   25% {
+     transform: skew(1deg);
+   }
+
+   50% {
+     fill: #7c12edf1;
+     transform: skew(-1deg);
+   }
+
+   75% {
+     transform: skew(1deg);
+   }
+
+   100% {
+     fill: #BCEA73;
+     transform: skew(0deg);
+   }
+ }
+
+ .asteroid-1 {
+   transform-origin: 1% 2%;
+   offset-path: path('M354.5 296.5C354.5 301.587 351.262 305.5 347.5 305.5C343.738 305.5 340.5 301.587 340.5 296.5C340.5 291.413 343.738 287.5 347.5 287.5C351.262 287.5 354.5 291.413 354.5 296.5Z');
+   animation: asteroid;
+   animation-duration: 7s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .asteroid-2 {
+   transform-origin: 1% 2%;
+   offset-path: path('M2106.5 237.5C2106.5 242.587 2103.26 246.5 2099.5 246.5C2095.74 246.5 2092.5 242.587 2092.5 237.5C2092.5 232.413 2095.74 228.5 2099.5 228.5C2103.26 228.5 2106.5 232.413 2106.5 237.5Z');
+   animation: asteroid;
+   animation-duration: 6s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .asteroid-3 {
+   transform-origin: 1% 2%;
+   offset-path: path('M1054.5 474.5C1054.5 479.587 1051.26 483.5 1047.5 483.5C1043.74 483.5 1040.5 479.587 1040.5 474.5C1040.5 469.413 1043.74 465.5 1047.5 465.5C1051.26 465.5 1054.5 469.413 1054.5 474.5Z');
+   animation: asteroid;
+   animation-duration: 8s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .asteroid-4 {
+   transform-origin: 1% 2%;
+   offset-path: path('M1655.5 256.5C1655.5 261.587 1652.26 265.5 1648.5 265.5C1644.74 265.5 1641.5 261.587 1641.5 256.5C1641.5 251.413 1644.74 247.5 1648.5 247.5C1652.26 247.5 1655.5 251.413 1655.5 256.5Z');
+   animation: asteroid;
+   animation-duration: 11s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .asteroid-5 {
+   transform-origin: 1% 2%;
+   offset-path: path('M1315.5 179.5C1315.5 184.587 1312.26 188.5 1308.5 188.5C1304.74 188.5 1301.5 184.587 1301.5 179.5C1301.5 174.413 1304.74 170.5 1308.5 170.5C1312.26 170.5 1315.5 174.413 1315.5 179.5Z');
+   animation: asteroid;
+   animation-duration: 7s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .asteroid-6 {
+   transform-origin: 1% 2%;
+   offset-path: path('M1775.5 859.5C1775.5 864.587 1772.26 868.5 1768.5 868.5C1764.74 868.5 1761.5 864.587 1761.5 859.5C1761.5 854.413 1764.74 850.5 1768.5 850.5C1772.26 850.5 1775.5 854.413 1775.5 859.5Z');
+   animation: asteroid;
+   animation-duration: 5s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .spaceship-1,
+ .spaceship-2,
+ .spaceship-3,
+ .spaceship-4,
+ .spaceship-5,
+ .spaceship-6 {
+   transform: rotate(100deg);
+   transform-origin: 0.8% 1.5%;
+ }
+
+
+ .spaceship-7,
+ .spaceship-8,
+ .spaceship-9 {
+   transform: rotate(100deg);
+   transform-origin: 1.2% 0.5%;
+ }
+
+ .spaceship-1 {
+   offset-path: path('M450.5 296.5C450.5 312.393 439.042 326.884 420.294 337.43C401.562 347.967 375.649 354.5 347 354.5C318.351 354.5 292.438 347.967 273.706 337.43C254.958 326.884 243.5 312.393 243.5 296.5C243.5 280.607 254.958 266.116 273.706 255.57C292.438 245.033 318.351 238.5 347 238.5C375.649 238.5 401.562 245.033 420.294 255.57C439.042 266.116 450.5 280.607 450.5 296.5Z');
+   animation: asteroid-spaceship;
+   animation-duration: 4s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(125deg) brightness(103%) contrast(103%);
+ }
+
+ .spaceship-2 {
+   offset-path: path('M2203.5 237.5C2203.5 253.393 2192.04 267.884 2173.29 278.43C2154.56 288.967 2128.65 295.5 2100 295.5C2071.35 295.5 2045.44 288.967 2026.71 278.43C2007.96 267.884 1996.5 253.393 1996.5 237.5C1996.5 221.607 2007.96 207.116 2026.71 196.57C2045.44 186.033 2071.35 179.5 2100 179.5C2128.65 179.5 2154.56 186.033 2173.29 196.57C2192.04 207.116 2203.5 221.607 2203.5 237.5Z');
+   animation: asteroid-spaceship;
+   animation-duration: 5s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   filter: invert(19%) sepia(60%) saturate(5225%) hue-rotate(303deg) brightness(101%) contrast(103%);
+ }
+
+ .spaceship-3 {
+   offset-path: path('M1411.5 179.5C1411.5 195.393 1400.04 209.884 1381.29 220.43C1362.56 230.967 1336.65 237.5 1308 237.5C1279.35 237.5 1253.44 230.967 1234.71 220.43C1215.96 209.884 1204.5 195.393 1204.5 179.5C1204.5 163.607 1215.96 149.116 1234.71 138.57C1253.44 128.033 1279.35 121.5 1308 121.5C1336.65 121.5 1362.56 128.033 1381.29 138.57C1400.04 149.116 1411.5 163.607 1411.5 179.5Z');
+   animation: asteroid-spaceship;
+   animation-duration: 4s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-direction: reverse;
+   transform: rotate(-100deg);
+   filter: invert(79%) sepia(23%) saturate(3465%) hue-rotate(111deg) brightness(97%) contrast(101%);
+ }
+
+ .spaceship-4 {
+   offset-path: path('M1872.5 859.5C1872.5 875.393 1861.04 889.884 1842.29 900.43C1823.56 910.967 1797.65 917.5 1769 917.5C1740.35 917.5 1714.44 910.967 1695.71 900.43C1676.96 889.884 1665.5 875.393 1665.5 859.5C1665.5 843.607 1676.96 829.116 1695.71 818.57C1714.44 808.033 1740.35 801.5 1769 801.5C1797.65 801.5 1823.56 808.033 1842.29 818.57C1861.04 829.116 1872.5 843.607 1872.5 859.5Z');
+   animation: asteroid-spaceship;
+   animation-duration: 3s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   filter: invert(66%) sepia(19%) saturate(7309%) hue-rotate(352deg) brightness(106%) contrast(102%);
+ }
+
+ .spaceship-5 {
+   offset-path: path('M1150.5 474.5C1150.5 490.393 1139.04 504.884 1120.29 515.43C1101.56 525.967 1075.65 532.5 1047 532.5C1018.35 532.5 992.438 525.967 973.706 515.43C954.958 504.884 943.5 490.393 943.5 474.5C943.5 458.607 954.958 444.116 973.706 433.57C992.438 423.033 1018.35 416.5 1047 416.5C1075.65 416.5 1101.56 423.033 1120.29 433.57C1139.04 444.116 1150.5 458.607 1150.5 474.5Z');
+   animation: asteroid-spaceship;
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-direction: reverse;
+   transform: rotate(-100deg);
+   filter: invert(33%) sepia(90%) saturate(2567%) hue-rotate(353deg) brightness(101%) contrast(102%);
+ }
+
+ .spaceship-6 {
+   offset-path: path('M1752.5 256.5C1752.5 272.393 1741.04 286.884 1722.29 297.43C1703.56 307.967 1677.65 314.5 1649 314.5C1620.35 314.5 1594.44 307.967 1575.71 297.43C1556.96 286.884 1545.5 272.393 1545.5 256.5C1545.5 240.607 1556.96 226.116 1575.71 215.57C1594.44 205.033 1620.35 198.5 1649 198.5C1677.65 198.5 1703.56 205.033 1722.29 215.57C1741.04 226.116 1752.5 240.607 1752.5 256.5Z');
+   animation: asteroid-spaceship;
+   animation-duration: 5s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   filter: invert(11%) sepia(86%) saturate(6615%) hue-rotate(238deg) brightness(95%) contrast(127%);
+ }
+
+ .spaceship-7 {
+   offset-path: path('M735.34 259.712C1319.31 682.96 1926.13 172.372 1316.83 284.635C707.526 396.897 1379.31 -49.4949 1566.03 180.876C1714.59 364.163 1885.4 174.769 1993.6 242.165C2101.79 309.56 2632.62 8.10376 2114.98 527.501C1597.33 1046.9 1253.3 470.535 1614.55 356.35C1975.8 242.165 1646.66 556.238 1871.09 591.842C2095.51 627.445 1805.12 735.272 1882.26 798.595C1959.39 861.918 2053.98 1346.89 2363.92 1039.17C2673.86 731.457 1574.76 905.405 1573.01 1041.46C1571.27 1177.52 1361.5 1204.73 1207.23 1154.63C1052.96 1104.53 936.731 934.906 1101.47 917.867C1266.22 900.828 1495.88 944.569 1587.32 861.918C1678.77 779.267 1614.55 657.453 1554.52 610.66C1494.48 563.867 1181.4 530.553 1178.61 448.665C1175.82 366.777 1292.74 344.907 1392.22 366.777C1491.69 388.647 1255.4 703.992 1255.4 703.992C1148.59 836.742 1137.16 592.408 716.842 427.812C296.522 263.216 151.373 -163.535 735.34 259.712Z');
+   animation: asteroid-spaceship;
+   animation-duration: 30s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .spaceship-8 {
+   offset-path: path('M493.859 689.762C531.455 790.184 610.166 851.997 717.36 849.262C835.848 846.238 994.849 749.376 938.855 641.762C882.86 534.148 768.477 475.611 784.24 614.762C800.004 753.913 883.664 780.993 1077.85 836.762C1272.05 892.531 1478.35 656.762 1399.85 581.762C1321.35 506.762 1208.85 485.762 1114.36 562.762C1019.87 639.762 1098.62 744.922 1350.86 807.262C1603.1 869.602 1936.79 663.191 1774.36 562.762C1677.37 502.793 1524.37 518.762 1482.36 562.762C1440.35 606.762 1460.35 661.262 1708.36 717.762C1956.37 774.262 2201.65 569.066 2089.86 415.262C2002.19 294.64 1790.99 275.134 1708.36 399.262C1611.79 544.328 1963.45 750.719 2089.86 630.762C2126.86 595.652 2138.35 565.849 2155.36 517.762C2246.34 260.549 1733.89 343.311 1466.86 399.262C1388.47 415.686 1351.94 463.771 1271.86 462.762C1167.07 461.441 1132.11 323.78 1029.86 346.762C958.512 362.798 954.046 446.02 882.86 462.762C771.979 488.84 729.702 280.072 625.36 325.762C559.393 354.648 542.847 407.202 515.355 473.762C482.993 552.111 464.138 610.373 493.859 689.762Z');
+   animation: asteroid-spaceship;
+   animation-duration: 30s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-direction: reverse;
+   transform: rotate(-75deg);
+ }
+
+ .spaceship-9 {
+   offset-path: path('M996.926 1116.92C892.773 1106.19 996.926 908.416 867.426 785.916C725.055 651.241 1124.82 655.887 971.426 533.916C814.57 409.192 791.426 813.916 663.926 456.915C594.819 263.416 433.813 543.07 391.426 456.915C336.967 346.223 376.277 217.271 482.426 154.415C617.646 74.3448 707.869 442.576 834.426 349.415C928.642 280.061 769.926 85.4148 996.926 119.915C1223.93 154.415 968.487 402.397 1133.43 401.915C1298.03 401.435 1188.93 119.915 1378.93 101.415C1568.93 82.9159 1455.52 461.789 1607.43 401.915C1728.78 354.085 1643.43 77.916 1857.43 101.416C2041.83 121.666 1929.43 264.416 2056.43 371.916C2183.43 479.416 2212.93 621.916 2212.93 726.415C2212.93 851.646 2212.93 1095.92 2088.93 1095.92C1952.69 1095.92 2087.43 735.917 1857.43 785.916C1741.88 811.035 1894.43 1139.52 1686.43 1155.92C1568.75 1165.19 1665.43 844.915 1531.43 844.915C1423.84 844.915 1445.69 1120.62 1339.43 1137.42C1226.11 1155.33 1339.43 774.416 1144.93 774.416C969.426 774.416 1195.93 1137.42 996.926 1116.92Z');
+   animation: asteroid-spaceship;
+   animation-duration: 25s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-direction: reverse;
+   transform: rotate(-75deg);
+ }
+
+ @keyframes asteroid-spaceship {
+   0% {
+
+     offset-distance: 0%;
+   }
+
+   100% {
+     offset-distance: 100%;
+   }
+ }
+
+ @keyframes asteroid {
+   0% {
+
+     offset-distance: 0%;
+   }
+
+   100% {
+     offset-distance: 100%;
+   }
+ }
+
+ .cow-2 {
+   transform: rotate(140deg);
+   transform-origin: 2.5% 3%;
+   offset-path: path('M1194.53 1159C1194.53 1159 1011.92 1035.69 1048.36 991.856C1084.8 948.023 1369.98 1012.33 1264.88 895.279C1159.78 778.23 889.931 911.027 1003.88 805.056C1117.82 699.086 1095.99 779.665 1226.5 714.5C1357.01 649.335 981.572 571 1175.79 495C1370 419 1194.53 1159 1194.53 1159Z');
+   animation: cow-2;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+
+ .ufo {
+   transform: rotate(145deg);
+   transform-origin: 3% 18%;
+   offset-path: path('M1194.53 1159C1194.53 1159 1011.92 1035.69 1048.36 991.856C1084.8 948.023 1369.98 1012.33 1264.88 895.279C1159.78 778.23 889.931 911.027 1003.88 805.056C1117.82 699.086 1095.99 779.665 1226.5 714.5C1357.01 649.335 981.572 571 1175.79 495C1370 419 1194.53 1159 1194.53 1159Z');
+   animation: ufo;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow-ufo1 {
+   transform: rotate(120deg);
+   transform-origin: 5% 12%;
+   offset-path: path('M2126 1208C2126 1208 1762.53 1129.69 1647.7 783.347C1532.87 437.003 2085.56 36 2085.56 36');
+   animation: cowufo-1;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow-ufo2 {
+   transform: rotate(120deg);
+   transform-origin: 5% 12%;
+   offset-path: path('M1719.53 1208C2020.98 915.063 2068.82 767.248 2041.3 579.76C2013.77 392.273 1802.6 504.662 1657.97 258.131C1513.35 11.5995 1433 29.5 1433 29.5');
+   animation: cowufo-2;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ .cow-ufo3 {
+   transform: rotate(120deg);
+   transform-origin: 5% 12%;
+   offset-path: path('M892 1208C519.615 1206.37 333.077 718.738 325.647 676.025C318.218 633.311 278.705 426.345 277.016 310.631C275.327 194.917 407.713 247.726 424.936 66');
+   animation: cowufo2;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+
+ @keyframes ufo {
+   0% {
+     offset-distance: 0%;
+   }
+
+   20% {
+     offset-distance: 20%;
+     transform: rotate(45deg);
+   }
+
+   30% {
+     offset-distance: 35%;
+     transform: rotate(65deg);
+   }
+
+   40% {
+     offset-distance: 50%;
+     transform: rotate(85deg);
+   }
+
+   50% {
+     offset-distance: 70%;
+     transform: rotate(65deg);
+   }
+
+   60% {
+     offset-distance: 70%;
+     transform: rotate(15deg);
+   }
+
+   70% {
+     offset-distance: 70%;
+     transform: rotate(-35deg);
+   }
+
+   80% {
+     offset-distance: 70%;
+     transform: rotate(-85deg);
+   }
+
+   100% {
+     offset-distance: 100%;
+     transform: rotate(-90deg);
+   }
+ }
+
+ @keyframes cow-2 {
+   0% {
+     offset-distance: 0%;
+   }
+
+   20% {
+     offset-distance: 20%;
+     transform: rotate(45deg);
+   }
+
+   30% {
+     offset-distance: 35%;
+     transform: rotate(65deg);
+   }
+
+   40% {
+     offset-distance: 50%;
+     transform: rotate(85deg);
+   }
+
+   50% {
+     offset-distance: 70%;
+     transform: rotate(105deg);
+   }
+
+   100% {
+     offset-distance: 100%;
+     transform: rotate(-90deg);
+   }
+ }
+
+ @keyframes cowufo-1 {
+   0% {
+     offset-distance: 0%;
+   }
+
+   50% {
+     offset-distance: 30%;
+   }
+
+   80% {
+     transform: rotate(120deg);
+     offset-distance: 75%;
+     opacity: 1;
+   }
+
+   100% {
+     transform: rotate(80deg);
+     offset-distance: 100%;
+     opacity: 0;
+   }
+ }
+
+ @keyframes cowufo-2 {
+   0% {
+     transform: rotate(50deg);
+     offset-distance: 0%;
+   }
+
+   50% {
+     offset-distance: 30%;
+   }
+
+   80% {
+     offset-distance: 50%;
+     opacity: 1;
+   }
+
+   100% {
+     offset-distance: 100%;
+     opacity: 0;
+   }
+ }
+
+ @keyframes cowufo2 {
+   0% {
+
+     offset-distance: 0%;
+   }
+
+   30% {
+     offset-distance: 20%;
+   }
+
+   50% {
+     transform: rotate(120deg);
+     offset-distance: 35%;
+   }
+
+   80% {
+
+     offset-distance: 50%;
+     opacity: 1;
+     transform: rotate(90deg);
+   }
+
+   100% {
+     offset-distance: 100%;
+     opacity: 0;
+     transform: rotate(90deg);
+   }
+ }
