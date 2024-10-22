@@ -1,0 +1,8 @@
+# Exported from Render on 2024-10-22T18:49:12Z
+services:
+- type: web
+  name: svg
+  runtime: static
+  repo: https://github.com/Mackedonec/svg
+  staticPublishPath: svg
+version: "1"
